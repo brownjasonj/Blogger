@@ -1,7 +1,6 @@
 import * as React from 'react'
 
-
-export default class App extends React.Component<any, any> {
+class App extends React.Component<any, any> {
     constructor(props: any) {
         super(props);
     }
@@ -9,8 +8,10 @@ export default class App extends React.Component<any, any> {
     public render() {
         return (
             <div>
-
+                {this.props.children}
             </div>
         );
     }
 }
+
+export { App };

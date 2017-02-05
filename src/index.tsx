@@ -4,13 +4,13 @@ import * as Redux from 'redux';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux'
 import promiseMiddleware from 'redux-promise-middleware';
+import { Router, browserHistory } from 'react-router';
+
 import { reducers } from './reducers'
+import routes from './routes';
 
 // Import the Hot Module Reloading App Container – more on why we use 'require' below
 const { AppContainer } = require('react-hot-loader');
-
-// Import our App container (which we will create in the next step)
-import App from './components/app';
 
 // Tell Typescript that there is a global variable called module - see below
 declare var module: { hot: any };
@@ -27,7 +27,7 @@ const createStoreWithMiddleware = Redux.applyMiddleware(promiseMiddleware())(Red
 render(
   <AppContainer>
     <Provider store={createStoreWithMiddleware(reducers)}>
-      <App />
+      <Router history={browserHistory} routes={routes}/>
     </Provider>
   </AppContainer>,
   rootEl
