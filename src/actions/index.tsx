@@ -18,4 +18,4 @@ function fetchPosts() {
     };
 }
 
-export {fetchPosts, FETCH_POSTS, FETCH_POSTS_PENDING, FETCH_POSTS_COMPLETED};
+export { fetchPosts, FETCH_POSTS, FETCH_POSTS_PENDING, FETCH_POSTS_COMPLETED };

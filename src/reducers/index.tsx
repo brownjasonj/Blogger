@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux';
 
+import PostReducer from './posts.reducer';
+
 // state argument is not Application state, but only the Container state
 // that it is bound too.
 function defaultReducer(state: any = null, action: any) {
