@@ -1,10 +1,16 @@
 import * as React from 'react';
 import * as ReactRedux from 'react-redux';
 
+import { fetchPosts } from '../actions/index';
 
-class IndexPosts extends React.Component<any, any> {
+
+class PostsIndex extends React.Component<any, any> {
     constructor(props: any) {
         super(props)
+    }
+
+    componentWillMount() {
+        fetchPosts();
     }
 
     render() {
@@ -14,8 +20,6 @@ class IndexPosts extends React.Component<any, any> {
     }
 }
 
-function mapStatetoProps() {
+ReactRedux.connect(null, { fetchPosts })(PostsIndex);
 
-}
-
-export { IndexPosts }
+export { PostsIndex }

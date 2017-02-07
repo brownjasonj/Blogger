@@ -12,7 +12,7 @@ function defaultReducer(state: any = null, action: any) {
 // Each "sub"-state is defined by an individal reducer, which is a funtion that returns 
 // a state.
 const reducers = combineReducers({
-    default: defaultReducer
+    posts: PostReducer
 });
 
 export {reducers};

@@ -1,8 +1,8 @@
 import { FETCH_POSTS_COMPLETED } from '../actions/index';
 
 const INITIAL_STATE = {
-    all: [],
-    post: null
+    all: [],        // list of posts
+    post: null      //  currently selected post
 };
 
 export default function(state = INITIAL_STATE, action) {
