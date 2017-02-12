@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { reducer as FormReducer } from 'redux-form';
+import { reducer as formReducer } from 'redux-form';
 
 import PostReducer from './posts.reducer';
 
@@ -14,7 +14,7 @@ function defaultReducer(state: any = null, action: any) {
 // a state.
 const reducers = combineReducers({
     posts: PostReducer,
-    form: FormReducer
+    form: formReducer
 });
 
 export { reducers };
