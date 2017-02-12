@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { reducer as FormReducer } from 'redux-form';
 
 import PostReducer from './posts.reducer';
 
@@ -12,7 +13,8 @@ function defaultReducer(state: any = null, action: any) {
 // Each "sub"-state is defined by an individal reducer, which is a funtion that returns 
 // a state.
 const reducers = combineReducers({
-    posts: PostReducer
+    posts: PostReducer,
+    form: FormReducer
 });
 
-export {reducers};
+export { reducers };
